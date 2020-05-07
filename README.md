@@ -63,14 +63,14 @@ Currently we havent created the testing part, so it will be a manual check that 
     * trigger : PollSCM
     * Build : Execut shell
       ```
-sudo cp -rvf * /websitepro
+       sudo cp -rvf * /websitepro
 
-if sudo docker ps -a | grep master
-then
-echo "Already Running"
-else
-sudo docker run -dit 8081:80 --name production -v /WebsitePro:/usr/local/apache2/htdocs/httpd
-fi
+       if sudo docker ps -a | grep master
+       then
+       echo "Already Running"
+       else
+       sudo docker run -dit 8081:80 --name production -v /WebsitePro:/usr/local/apache2/htdocs/httpd
+       fi
       ```
        
 
