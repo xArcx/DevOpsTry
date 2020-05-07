@@ -61,7 +61,7 @@ Currently we havent created the testing part, so it will be a manual check that 
   * Job1
     * SCM : use git
     * trigger : PollSCM
-    * Build : Execut shell
+    * Build : Execute shell
       ```
        sudo cp -rvf * /websitepro
 
@@ -72,7 +72,27 @@ Currently we havent created the testing part, so it will be a manual check that 
        sudo docker run -dit 8081:80 --name production -v /WebsitePro:/usr/local/apache2/htdocs/httpd
        fi
       ```
-       
+  * Job1
+    * SCM : use git
+    * trigger : PollSCM
+    * Build : Execute shell
+      ```
+       sudo cp -rvf * /websiteTest
+
+       if sudo docker ps -a | grep dev1
+       then
+       echo "Already Running"
+       else
+       sudo docker run -dit 8081:80 --name production -v /WebsiteTest:/usr/local/apache2/htdocs/httpd
+       fi
+      ```   
+  * Job3
+    * SCM:git
+    * Additional Behaviors :Merge Before build Dev and Master using fast-forward mode.
+    * trigger: Build after other projects are built( here job1s successfull build )
+    * Post build action: Push to Master branch after succesful build.
+    
+    
 
 #### 
 
@@ -86,5 +106,6 @@ Give an example
 
 Add additional notes about how to deploy this on a live system.
 
-### Built With
+### Final Thanks
+  To Vimal Daga sir, for explaining things so well and imparting us with knowledge and for imparting us with the thirst and interest to learn DevOps concepts.
 
