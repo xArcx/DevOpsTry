@@ -1,46 +1,53 @@
 # DevOpsTry
 ## Project Title
-
-One Paragraph of project description goes here
+Assignment to create a automation system for connecting developer team, testing team and production team.
 
 ### Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+
 
 #### Prerequisites
 
-What things you need to install the software and how to install them
+For doing this project you need to have yum configured for RHEL8 and install and configure docker and jenkins.
+Developer team need to have git in their system.
 
-```
-Give examples
 
-```
 ### Steps
-#### Installing
+#### Getting started with developer end.
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
+First need to create a GitHub repo for centalised source code management.
+Then developer can clone the  repo to his local directory.
+```
+git clone <url of git repo>
 
 ```
-Give the example
+
+Now copy his website html files to the folder and do a commit
+
 ```
-
-And repeat
-
+until finished
+```
+and to first push to origin from master branch.
+```
+until finished
+```
+Now, for further changes and testing, developer can create branches, modify/add code, do commits!
+```
+until finished
+```
+Create a hook, for automation. Automate push after each commit.
 ```
 until finished
 ```
 
 End with an example of getting some data out of the system or using it for a little demo
 
-### Running the tests
+### Running the tests 
+For doing tests on the developer modified code we , need to send it to the testing environment.These environments will be created using docker images. And we will automate this sending data from github developers branch to testing environment using Jenkins.
 
-Explain how to run the automated tests for this system
+#### Setting up jenkins and creating the Jobs/tasks.
 
-#### Break down into end to end tests
-
-Explain what these tests test and why
+Currently we havent created the testing part, so it will be a manual check that if the site is working or not.
 
 ```
 Give an example
