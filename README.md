@@ -57,11 +57,24 @@ For doing tests on the developer modified code we , need to send it to the testi
 
 Currently we havent created the testing part, so it will be a manual check that if the site is working or not.
 
-```
-Give an example
-```
+* configuring the jobs
+  * Job1
+    * SCM : use git
+    * trigger : PollSCM
+    * Build : Execut shell
+      ```
+sudo cp -rvf * /websitepro
 
-#### And coding style tests
+if sudo docker ps -a | grep master
+then
+echo "Already Running"
+else
+sudo docker run -dit 8081:80 --name production -v /WebsitePro:/usr/local/apache2/htdocs/httpd
+fi
+      ```
+       
+
+#### 
 
 Explain what these tests test and why
 
