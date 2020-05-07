@@ -45,10 +45,13 @@ End with an example of getting some data out of the system or using it for a lit
 ### Running the tests 
 For doing tests on the developer modified code we , need to send it to the testing environment.These environments will be created using docker images. And we will automate this sending data from github developers branch to testing environment using Jenkins.
 
-3 jobs- 
-  -Job1--> monitor the dev branch, when ever there is change, deploy it to testing docker environment.And after succesfull test, trigger Job3(Right now we dont have any tests, will add in future).
-  -Job2-->monitor the master branch, when ever there is changes, deploy it to production environment for client.
-  -Job3-->Merge dev and master brnach, after successfull test ,hence modifying master and thus triggering job2 again.
+* 3 jobs
+
+  * Job1--> monitor the dev branch, when ever there is change, deploy it to testing docker environment.And after succesfull test, trigger Job3(Right now we dont have any tests, will add in future).
+  
+  * Job2-->monitor the master branch, when ever there is changes, deploy it to production environment for client.
+  
+  * Job3-->Merge dev and master brnach, after successfull test ,hence modifying master and thus triggering job2 again.
 
 #### Setting up jenkins and creating the Jobs/tasks.
 
