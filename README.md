@@ -83,7 +83,7 @@ Currently we havent created the testing part, so it will be a manual check that 
        then
        echo "Already Running"
        else
-       sudo docker run -dit 8081:80 --name production -v /WebsiteTest:/usr/local/apache2/htdocs/httpd
+       sudo docker run -dit 8081:80 --name Testing -v /WebsiteTest:/usr/local/apache2/htdocs/httpd
        fi
       ```   
   * Job3
